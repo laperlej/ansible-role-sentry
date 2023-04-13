@@ -30,7 +30,7 @@
 - name: Run install.sh
   command:
     chdir: "{{ sentry_docker_compose_project_folder }}"
-    cmd: ./install.sh --no-user-prompt
+    cmd: ./install.sh --skip-user-creation
   when: sentry_repo.after != sentry_repo.before
 
 - name: Configure sentry email settings
