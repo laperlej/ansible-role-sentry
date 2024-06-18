@@ -54,7 +54,7 @@
     line: "{{ item.key }}: {{ item.value | to_json }}"
 
 - name: Start sentry self hosted docker-compose project
-  docker_compose:
+  community.docker.docker_compose_v2:
     project_src: "{{ sentry_docker_compose_project_folder }}"
     remove_orphans: true
     state: present
